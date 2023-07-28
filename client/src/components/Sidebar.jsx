@@ -121,37 +121,33 @@ function Sidebar({
                         '& .MuiDrawer-paper': {
                             color: theme.palette.secondary[200],
                             backgroundColor: theme.palette.background.alt,
-                            boxSizing: 'border-box',
+                            boxSixing: 'border-box',
                             borderWidth: isNonMobile ? 0 : '2px',
                             width: drawerWidth,
                         },
                     }}
                 >
-                    <Box sx={{ width: '100%' }}>
-                        <Box sx={{ margin: '1.5rem 2rem 2rem 3rem' }}>
-                            <FlexBetween
-                                sx={{ color: theme.palette.secondary.main }}
-                            >
+                    <Box width="100%">
+                        <Box m="1.5rem 2rem 2rem 3rem">
+                            <FlexBetween color={theme.palette.secondary.main}>
                                 <Box
-                                    sx={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '0.5rem',
-                                    }}
+                                    display="flex"
+                                    alignItems="center"
+                                    gap="0.5rem"
                                 >
                                     <Typography variant="h4" fontWeight="bold">
-                                        Admin Panel
+                                        ECOMVISION
                                     </Typography>
-                                    {!isNonMobile && (
-                                        <IconButton
-                                            onClick={() =>
-                                                setIsSidebarOpen(!isSidebarOpen)
-                                            }
-                                        >
-                                            <ChevronLeft />
-                                        </IconButton>
-                                    )}
                                 </Box>
+                                {!isNonMobile && (
+                                    <IconButton
+                                        onClick={() =>
+                                            setIsSidebarOpen(!isSidebarOpen)
+                                        }
+                                    >
+                                        <ChevronLeft />
+                                    </IconButton>
+                                )}
                             </FlexBetween>
                         </Box>
                         <List>
@@ -160,9 +156,7 @@ function Sidebar({
                                     return (
                                         <Typography
                                             key={text}
-                                            sx={{
-                                                margin: '2.25rem 0 1rem 3rem',
-                                            }}
+                                            sx={{ m: '2.25rem 0 1rem 3rem' }}
                                         >
                                             {text}
                                         </Typography>
@@ -193,7 +187,7 @@ function Sidebar({
                                         >
                                             <ListItemIcon
                                                 sx={{
-                                                    ml: '2rem',
+                                                    marginLeft: '2rem',
                                                     color:
                                                         active === lcText
                                                             ? theme.palette
@@ -217,12 +211,12 @@ function Sidebar({
                         </List>
                     </Box>
 
-                    <Box sx={{postion:"absolute", bottom:"2rem"}}>
+                    <Box position="absolute" bottom="2rem">
                         <Divider />
                         <FlexBetween
                             textTransform="none"
                             gap="1rem"
-                            margin="1.5rem 2rem 0rem 3rem"
+                            margin="1.5rem 2rem 0 3rem"
                         >
                             <Box
                                 component="img"
@@ -237,17 +231,13 @@ function Sidebar({
                                 <Typography
                                     fontWeight="bold"
                                     fontSize="0.9rem"
-                                    sx={{
-                                        color: theme.palette.secondary[100],
-                                    }}
+                                    sx={{ color: theme.palette.secondary[100] }}
                                 >
                                     {user.name}
                                 </Typography>
                                 <Typography
                                     fontSize="0.8rem"
-                                    sx={{
-                                        color: theme.palette.secondary[200],
-                                    }}
+                                    sx={{ color: theme.palette.secondary[200] }}
                                 >
                                     {user.occupation}
                                 </Typography>
@@ -255,7 +245,7 @@ function Sidebar({
                             <SettingsOutlined
                                 sx={{
                                     color: theme.palette.secondary[300],
-                                    fontSize: '25px',
+                                    fontSize: '25px ',
                                 }}
                             />
                         </FlexBetween>

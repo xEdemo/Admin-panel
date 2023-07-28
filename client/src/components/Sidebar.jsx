@@ -136,7 +136,7 @@ function Sidebar({
                                     gap="0.5rem"
                                 >
                                     <Typography variant="h4" fontWeight="bold">
-                                        ECOMVISION
+                                        Admin Panel
                                     </Typography>
                                 </Box>
                                 {!isNonMobile && (
